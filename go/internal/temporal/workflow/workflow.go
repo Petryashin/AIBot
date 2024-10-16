@@ -15,11 +15,11 @@ func SendMessageWorkflow(ctx workflow.Context, data MessageData) (ResponseMessag
 		InitialInterval:    15 * time.Second,
 		BackoffCoefficient: 2.0,
 		MaximumInterval:    time.Second * 60,
-		MaximumAttempts:    1,
+		MaximumAttempts:    10,
 	}
 
 	options := workflow.ActivityOptions{
-		StartToCloseTimeout: time.Second * 3,
+		StartToCloseTimeout: time.Second * 5,
 		RetryPolicy:         retryPolicy,
 	}
 
