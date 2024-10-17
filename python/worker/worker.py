@@ -11,7 +11,7 @@ async def start_worker():
 
     worker = Worker(
         client,
-        task_queue="AI-message",
+        task_queue="AI-message-python",
         activities=[GetAIAnswer],
     )
 
