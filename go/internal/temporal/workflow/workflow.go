@@ -21,6 +21,7 @@ func SendMessageWorkflow(ctx workflow.Context, data MessageData) (ResponseMessag
 	options := workflow.ActivityOptions{
 		StartToCloseTimeout: time.Second * 5,
 		RetryPolicy:         retryPolicy,
+		TaskQueue:           PythonTaskQueueName,
 	}
 
 	ctx = workflow.WithActivityOptions(ctx, options)
