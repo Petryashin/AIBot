@@ -5,9 +5,9 @@ const PythonTaskQueueName = "AI-message-python"
 const WorkflowIdPrefix = "ai-message-"
 
 type MessageData struct {
-	Text string
+	Text string `json:"text"`
 }
 
 type ResponseMessageData struct {
-	Response string
+	Response string `json:"response"`
 }
