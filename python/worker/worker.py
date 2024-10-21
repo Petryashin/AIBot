@@ -1,7 +1,6 @@
-from temporalio import workflow
 from temporalio.client import Client
 from temporalio.worker import Worker
-from activity.activity import GetAIAnswer
+from python.activity.activity import GetAIAnswer
 import logging
 
 logging.basicConfig(level=logging.INFO)
